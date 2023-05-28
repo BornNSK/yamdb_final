@@ -1,7 +1,6 @@
 version: '3.7'
 
 services:
-  # db container
   db:
     image: postgres:latest
     volumes:
@@ -9,11 +8,10 @@ services:
     env_file:
       - ./.env
 
-  # web container
   web:
     build:
       context: ../
-      dockerfile: yamdb_final/api_yamdb/Dockerfile
+      dockerfile: api_yamdb/Dockerfile
     restart: always
     volumes:
       - static_value:/app/static/
@@ -23,7 +21,6 @@ services:
     env_file:
       - ./.env
 
-  # nginx container
   nginx:
     image: nginx:1.21.3-alpine
     ports:
