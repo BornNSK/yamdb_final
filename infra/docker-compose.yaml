@@ -10,7 +10,6 @@ services:
 
   web:
     image: bornnsk/yamdb_final
-    build: ../api_yamdb/
     restart: always
     volumes:
       - static_value:/app/static/
