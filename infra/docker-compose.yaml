@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: bornnsk/yamdb_final
+    image: bornnsk/yamdb_final:latest
     build: ../api_yamdb/
     restart: always
     volumes:
