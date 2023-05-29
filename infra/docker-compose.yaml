@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 services:
   db:
@@ -9,9 +9,8 @@ services:
       - ./.env
 
   web:
-    build:
-      context: ../
-      dockerfile: api_yamdb/Dockerfile
+    image: bornnsk/yamdb_final
+    build: ../api_yamdb/
     restart: always
     volumes:
       - static_value:/app/static/
