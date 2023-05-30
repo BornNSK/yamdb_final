@@ -89,4 +89,4 @@ scp nginx.conf <username>@<host>:/home/<username>/nginx/nginx.conf
 ##
 Автор:
 
-Евсюков Bornki11@yandex.ru
+Евсюков Игорь Bornki11@yandex.ru
