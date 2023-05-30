@@ -48,7 +48,7 @@ scp nginx.conf <username>@<host>:/home/<username>/nginx/nginx.conf
 ```
 Добавить в Actions Secrets GitHub переменные окружения для работы:
 
-    ```
+    
     DB_ENGINE=<django.db.backends.postgresql>
     DB_NAME=<имя базы данных postgres>
     DB_USER=<пользователь бд>
@@ -66,7 +66,7 @@ scp nginx.conf <username>@<host>:/home/<username>/nginx/nginx.conf
 
     TELEGRAM_TO=<ID чата, в который придет сообщение>
     TELEGRAM_TOKEN=<токен вашего бота>
-    ```
+    
 
 После запуска контенейров выполнить следующие действия (только при первом деплое):
     * провести миграции внутри контейнеров:
