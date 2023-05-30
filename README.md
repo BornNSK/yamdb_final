@@ -47,7 +47,8 @@ scp docker-compose.yml <username>@<host>:/home/<username>/docker-compose.yml
 scp nginx.conf <username>@<host>:/home/<username>/nginx/nginx.conf
 ```
 Добавить в Actions Secrets GitHub переменные окружения для работы:
-    ```
+
+    
     DB_ENGINE=<django.db.backends.postgresql>
     DB_NAME=<имя базы данных postgres>
     DB_USER=<пользователь бд>
@@ -65,22 +66,27 @@ scp nginx.conf <username>@<host>:/home/<username>/nginx/nginx.conf
 
     TELEGRAM_TO=<ID чата, в который придет сообщение>
     TELEGRAM_TOKEN=<токен вашего бота>
-    ```
+    
 
 После запуска контенейров выполнить следующие действия (только при первом деплое):
+
     * провести миграции внутри контейнеров:
-    ```bash
+    
+    ```
     docker-compose exec web python manage.py migrate
     ```
     * собрать статику проекта:
-    ```bash
+    
+    ```
     docker-compose exec web python manage.py collectstatic --no-input
-    ```  
+    ```
+    
     * Создать суперпользователя Django, после запроса от терминала ввести логин и пароль для суперпользователя:
-    ```bash
+    
+    ```
     docker-compose exec web python manage.py createsuperuser
     ```
 ##
 Автор:
 
-Евсюков Bornki11@yandex.ru
+Евсюков Игорь Bornki11@yandex.ru
