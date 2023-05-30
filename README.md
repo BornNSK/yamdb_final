@@ -47,6 +47,7 @@ scp docker-compose.yml <username>@<host>:/home/<username>/docker-compose.yml
 scp nginx.conf <username>@<host>:/home/<username>/nginx/nginx.conf
 ```
 Добавить в Actions Secrets GitHub переменные окружения для работы:
+
     ```
     DB_ENGINE=<django.db.backends.postgresql>
     DB_NAME=<имя базы данных postgres>
