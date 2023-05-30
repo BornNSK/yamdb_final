@@ -70,15 +70,15 @@ scp nginx.conf <username>@<host>:/home/<username>/nginx/nginx.conf
 
 После запуска контенейров выполнить следующие действия (только при первом деплое):
     * провести миграции внутри контейнеров:
-    ```bash
+    ```
     docker-compose exec web python manage.py migrate
     ```
     * собрать статику проекта:
-    ```bash
+    ```
     docker-compose exec web python manage.py collectstatic --no-input
     ```  
     * Создать суперпользователя Django, после запроса от терминала ввести логин и пароль для суперпользователя:
-    ```bash
+    ```
     docker-compose exec web python manage.py createsuperuser
     ```
 ##
